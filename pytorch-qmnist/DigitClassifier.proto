@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service DigitClassifier {
+  rpc Classify (Image) returns (Classification);
+}
+
+message Image {
+  int32 width = 1;
+  int32 height = 2;
+  bytes image_data = 3;
+}
+
+message Classification {
+  int32 value = 1;
+}

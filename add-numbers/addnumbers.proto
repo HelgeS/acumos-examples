@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AddNumbers {
+  rpc add (AddIn) returns (AddOut);
+}
+
+message AddIn {
+  int64 x = 1;
+  int64 y = 2;
+}
+
+message AddOut {
+  int64 value = 1;
+}
